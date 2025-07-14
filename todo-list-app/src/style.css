@@ -1,0 +1,110 @@
+body {
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+    padding: 2rem;
+}
+header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+#date {
+    color: #2980b9;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+.input-section {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+#task-input {
+    flex: 1;
+    padding: 0.7rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+#add-task-btn {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#add-task-btn:hover {
+    background: #6dd5ed;
+}
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7faff;
+    margin-bottom: 0.7rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+    transition: box-shadow 0.2s;
+}
+.task-item:hover {
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+}
+.task-text {
+    flex: 1;
+    font-size: 1rem;
+    color: #34495e;
+}
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    color: #2980b9;
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    transition: background 0.2s, color 0.2s;
+}
+.edit-btn:hover {
+    background: #dff9fb;
+    color: #27ae60;
+}
+.delete-btn:hover {
+    background: #f9e0e0;
+    color: #e74c3c;
+}
+.fade-out {
+    animation: fadeOut 0.4s forwards;
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(40px) scale(0.9);
+    }
+}
+@media (max-width: 500px) {
+    .container {
+        max-width: 98vw;
+        padding: 1rem;
+    }
+    .input-section {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+}
